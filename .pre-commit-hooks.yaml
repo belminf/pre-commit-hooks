@@ -6,7 +6,7 @@
 - id: bundler-audit
   name: Patch-level verification for bundler
   description: Check for vulnerable gem versions and insecure sources
-  entry: run-bundle-audit
+  entry: pre_commit_hooks/run-bundle-audit
   language: ruby
   pass_filenames: false
   files: Gemfile.lock
@@ -22,7 +22,7 @@
 - id: fasterer
   name: Suggest speed improvements in Ruby
   description: Use fasterer to suggest speed improvements in Ruby
-  entry: run-fasterer
+  entry: pre_commit_hooks/run-fasterer
   language: ruby
   types: ['ruby']
 
@@ -55,21 +55,21 @@
 - id: markdownlint
   name: Check markdown files
   description: Check markdown files and flag style issues
-  entry: run-mdl
+  entry: pre_commit_hooks/run-mdl
   language: ruby
   types: ['markdown']
 
 - id: reek
   name: Find ruby code smells
   description: Use reek to find ruby code smells
-  entry: run-reek
+  entry: pre_commit_hooks/run-reek
   language: ruby
   types: ['ruby']
 
 - id: require-ascii
   name: Check file encoding
   description: Ensure file is ascii-encoded
-  entry: require-ascii.py
+  entry: pre_commit_hooks/require-ascii.py
   language: python
   types: [text]
   additional_dependencies: [chardet]
@@ -77,7 +77,7 @@
 - id: rubocop
   name: Check Ruby style with rubocop and rubocop-rspec
   description: Enforce Ruby style guide with rubocop and rubocop-rspec
-  entry: run-rubocop
+  entry: pre_commit_hooks/run-rubocop
   language: ruby
   types: ['ruby']
 
