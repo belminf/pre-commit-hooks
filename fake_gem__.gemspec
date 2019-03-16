@@ -14,10 +14,10 @@ Gem::Specification.new do |s|
   s.add_dependency 'rubocop-rspec', '1.32.0'
   s.bindir = 'pre_commit_hooks'
   s.executables = [
-    'run-bundle-audit',
-    'run-fasterer',
-    'run-mdl',
-    'run-reek',
-    'run-rubocop',
+    'pre_commit_hooks/run-bundle-audit',
+    'pre_commit_hooks/run-fasterer',
+    'pre_commit_hooks/run-mdl',
+    'pre_commit_hooks/run-reek',
+    'pre_commit_hooks/run-rubocop',
   ]
 end
